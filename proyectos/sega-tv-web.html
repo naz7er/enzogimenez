@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEGA TV web — Enzo Gimenez</title>
+<meta name="description" content="La página del canal SEGA TV: estrenos, catálogo, noticias, planes y contacto. Diseñada para computadora, tablet y celular, y programada en HTML y CSS.">
+<meta property="og:title" content="SEGA TV web — Enzo Gimenez">
+<meta property="og:description" content="La página del canal SEGA TV: estrenos, catálogo, noticias, planes y contacto. Diseñada para computadora, tablet y celular, y programada en HTML y CSS.">
+<meta property="og:image" content="../media/poster-web.jpg">
+<meta name="theme-color" content="#f1f1ee">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body id="top">
+
+<header class="bar">
+  <a class="bar__mark" href="../index.html">Enzo Gimenez</a>
+  <nav class="bar__links" aria-label="Secciones"><a href="../index.html#trabajos">Trabajos</a><a href="../index.html#miniaturas">Miniaturas</a><a href="../index.html#sobre-mi">Sobre mí</a><a href="../index.html#contacto">Contacto</a></nav>
+  <details class="bar__menu">
+    <summary>Menú</summary>
+    <nav class="bar__sheet" aria-label="Secciones"><a href="../index.html#trabajos">Trabajos</a><a href="../index.html#miniaturas">Miniaturas</a><a href="../index.html#sobre-mi">Sobre mí</a><a href="../index.html#contacto">Contacto</a></nav>
+  </details>
+</header>
+
+<main>
+  <section class="case__head" aria-labelledby="p-title">
+    <h1 class="case__title" id="p-title">SEGA TV web</h1>
+    <p class="case__lead">La página del canal SEGA TV: estrenos, catálogo, noticias, planes y contacto. Diseñada para computadora, tablet y celular, y programada en HTML y CSS.</p>
+    <dl class="facts"><div><dt>Año</dt><dd>2025</dd></div><div><dt>Qué es</dt><dd>Sitio web del canal</dd></div><div><dt>Pantallas</dt><dd>Computadora, tablet y celular</dd></div><div><dt>Código</dt><dd>HTML, CSS y Bootstrap</dd></div></dl>
+    <p><a class="btn" href="#ver">Usar la página</a></p>
+  </section>
+
+  <section class="case__hero" id="ver" aria-labelledby="ver-title">
+    <h2 class="visually-hidden" id="ver-title">La página funcionando</h2>
+    <iframe class="media case__site" src="../sega-web/index.html" title="La página de SEGA TV, funcionando"></iframe>
+    <p class="caption">Es la página real: podés bajar, tocar los botones y recorrerla. <a href="../sega-web/index.html" target="_blank" rel="noopener">Abrirla en otra pestaña</a></p>
+  </section>
+
+  <section class="sec">
+    <div class="sec__head"><h2 class="h3">Bocetos</h2><p class="sec__intro">Antes de programar, cada sección se probó en bocetos.</p></div>
+    <ol class="gal">
+      <li class="gal__item"><button class="zoom" type="button" data-caption="Inicio" aria-label="Ampliar: Inicio"><img class="media" src="../media/web-boceto-1.jpg" alt="Inicio: El estreno destacado arriba de todo." loading="lazy"></button><p class="gal__name">Inicio</p><p class="gal__text">El estreno destacado arriba de todo.</p></li>
+      <li class="gal__item"><button class="zoom" type="button" data-caption="Novedades" aria-label="Ampliar: Novedades"><img class="media" src="../media/web-boceto-2.jpg" alt="Novedades: Un carrusel con lo nuevo del canal." loading="lazy"></button><p class="gal__name">Novedades</p><p class="gal__text">Un carrusel con lo nuevo del canal.</p></li>
+      <li class="gal__item"><button class="zoom" type="button" data-caption="Otra versión del inicio" aria-label="Ampliar: Otra versión del inicio"><img class="media" src="../media/web-boceto-3.jpg" alt="Otra versión del inicio: Con el menú centrado y la ciudad de fondo." loading="lazy"></button><p class="gal__name">Otra versión del inicio</p><p class="gal__text">Con el menú centrado y la ciudad de fondo.</p></li>
+    </ol>
+  </section>
+
+  <section class="sec sec--split">
+    <div class="sec__copy"><h2 class="h3">La grilla</h2><p>Todo se ordena sobre una grilla de 12 columnas, con columnas de 70 px y separaciones de 30 px.</p><p>Así cada sección queda alineada con las demás, y la página se adapta a pantallas chicas sin desarmarse.</p></div>
+    <button class="zoom" type="button" data-caption="Diseño del inicio con la grilla de columnas marcada encima" aria-label="Ampliar: Diseño del inicio con la grilla de columnas marcada encima"><img class="media" src="../media/web-grilla.jpg" alt="Diseño del inicio con la grilla de columnas marcada encima" loading="lazy"></button>
+  </section>
+
+  <section class="sec">
+    <div class="sec__head"><h2 class="h3">En cada pantalla</h2></div>
+    <div class="devices"><figure class="device device--0"><button class="zoom" type="button" data-caption="Computadora" aria-label="Ampliar: Computadora"><img class="media" src="../media/web-desktop.jpg" alt="La página de SEGA TV en computadora" loading="lazy"></button><figcaption>Computadora</figcaption></figure><figure class="device device--1"><button class="zoom" type="button" data-caption="Tablet" aria-label="Ampliar: Tablet"><img class="media" src="../media/web-tablet.jpg" alt="La página de SEGA TV en tablet" loading="lazy"></button><figcaption>Tablet</figcaption></figure><figure class="device device--2"><button class="zoom" type="button" data-caption="Celular" aria-label="Ampliar: Celular"><img class="media" src="../media/web-phone.jpg" alt="La página de SEGA TV en celular" loading="lazy"></button><figcaption>Celular</figcaption></figure></div>
+  </section>
+
+  <section class="next" aria-labelledby="next-title">
+    <h2 class="next__title" id="next-title"><a href="osogrosso.html">Siguiente: OsoGrosso</a></h2>
+    <a class="next__media" href="osogrosso.html" tabindex="-1" aria-hidden="true"><video src="../media/loop-oso.mp4" poster="../media/poster-oso.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></a>
+    <p class="next__back"><a class="link" href="../index.html#trabajos">Volver a todos los trabajos</a></p>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Enzo Gimenez · Diseño multimedial · Moreno, Buenos Aires, 2026</p>
+  <p class="foot__links"><a href="mailto:enzogimenez07.eg@gmail.com">Mail</a><a href="../media/Enzo-Gimenez-CV.pdf" download>CV</a><a href="https://www.behance.net/enzogimenez2" target="_blank" rel="noopener">Behance</a><a href="#top">Volver arriba</a></p>
+  <p class="foot__note">SEGA TV y United in Grief no tienen relación oficial con SEGA ni con Kendrick Lamar.</p>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

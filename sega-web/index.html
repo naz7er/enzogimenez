@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SEGA • Knuckles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+</head>
+<body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn  = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('main-menu');
+
+    if (!btn || !menu) { console.warn('No encuentro .nav-toggle o #main-menu'); return; }
+
+    function toggleMenu() {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('open', !open);
+    }
+
+    btn.addEventListener('click', toggleMenu);
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('open')) {
+        btn.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('open');
+        btn.focus();
+      }
+    });
+
+    menu.addEventListener('click', (e) => {
+      if (e.target.closest('a') && menu.classList.contains('open')) {
+        btn.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('open');
+      }
+    });
+  });
+</script>
+
+  <script>
+  (function(){
+    const btn  = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('main-menu');
+
+    if(!btn || !menu) return;
+
+    const toggle = () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('open', !open);
+      if(!open) menu.querySelector('a')?.focus();
+    };
+
+    btn.addEventListener('click', toggle);
+
+    window.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape' && menu.classList.contains('open')){
+        btn.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('open');
+        btn.focus();
+      }
+    });
+
+    menu.addEventListener('click', (e) => {
+      const a = e.target.closest('a');
+      if(a && menu.classList.contains('open')){
+        btn.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('open');
+      }
+    });
+  })();
+</script>
+
+ <nav class="nav" aria-label="Principal">
+  <div class="nav-inner">
+    <a class="brand" href="#" aria-label="SEGA">
+      <img src="img/sega.png" alt="SEGA logo" />
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false"
+            aria-controls="main-menu" aria-label="Abrir menú">☰</button>
+
+    <!-- Menú -->
+    <div id="main-menu" class="menu" role="menubar">
+      <a href="#" class="active" role="menuitem">INICIO</a>
+      <a href="#noticias" role="menuitem">NOTICIAS</a>
+      <a href="#series" role="menuitem">SERIES</a>
+      <a href="#contacto" role="menuitem">CONTACTO</a>
+      <a class="btn-8bit" href="#planes" role="menuitem">SUSCRÍBETE</a>
+    </div>
+  </div>
+</nav>
+
+
+  
+  <header class="hero">
+    <div class="hero-media" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="eyebrow">del mundo de <b> SONIC THE HEDGEHOG</b></p>
+      <div class="title-img">
+        <img src= "img/Knuckles_series_logo.webp (2) (1).png"
+        alt="Knuckles Logo" />
+      </div>
+      <div class="cta">
+        <a class="btn-8bit" href="#">VER AHORA</a>
+      </div>
+    </div>
+  </header>
+
+<!-- ===================== SLIDE DE SERIES ==================== -->
+
+  <section class="landing-band">
+  <section class="section-catalog" id="series">
+
+      <div class="section-head">
+        <div>
+          <p class="eyebrow-sec">CONOCE</p>
+          <h2 class="section-title">NUESTRAS SERIES Y PELÍCULAS</h2>
+        </div>
+        <a class="see-all" href="#">Ver todo el catálogo ›</a>
+      </div>
+
+      <div class="card-viewport">
+        <button class="nav-btn prev" aria-label="Anterior">‹</button>
+
+        <div class="card-scroller" id="catalog-scroller" tabindex="0">
+
+  <article class="card">
+    <div class="card-inner">
+      <img src="img/sonic-boom.jpg" alt="Sonic Boom">
+      <div class="card-grad"></div>
+      <div class="card-meta">
+        <h3>Sonic Boom</h3>
+        <p class="type">Serie</p>
+        <p class="desc">Sonic y sus amigos enfrentan amenazas absurdas con humor, peleas rápidas y mucho caos en su isla.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-inner">
+      <img src="img/EGS_SonictheHedgehog3MoviePack_SONICTEAM_DLC_S2_1200x1600-7930400be5504730f7b7df50b194a229.jpg" alt="Shadow Generations">
+      <div class="card-grad"></div>
+      <div class="card-meta">
+        <h3>Shadow Generations</h3>
+        <p class="type">Juego</p>
+        <p class="desc">Viajá por líneas temporales para reescribir el destino de Shadow en niveles veloces y desafiantes.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-inner">
+      <img src="img/rompe-ralph-poster (1).jpg" alt="Ralph el Demoledor">
+      <div class="card-grad"></div>
+      <div class="card-meta">
+        <h3>Ralph el Demoledor</h3>
+        <p class="type">Película</p>
+        <p class="desc">Ralph abandona su rol de villano para buscar su lugar en el arcade, cruzándose con mundos y héroes retro.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-inner">
+      <img src="img/sonic_the_hedgehog_ver3_xlg_1024x1024_2x.png" alt="Sonic: la película">
+      <div class="card-grad"></div>
+      <div class="card-meta">
+        <h3>Sonic: la película</h3>
+        <p class="type">Película</p>
+        <p class="desc">Sonic llega a la Tierra y se enfrenta al Dr. Robotnik en una persecución frenética a pura velocidad.</p>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+        <button class="nav-btn next" aria-label="Siguiente">›</button>
+      </div>
+<!-- ===================== SLIDE DE NOTICIAS ===================== -->
+    </section>
+  </section>
+<section class="section-news" id="noticias">
+
+  <div class="news-grid">
+    <a class="news-card" href="#">
+      <img src="img/20257179281614_1.jpg.png" alt="Sonic: Racing muestra su personalización">
+      <div class="meta">Sonic: Racing muestra su personalización</div>
+    </a>
+
+    <a class="news-card" href="#">
+      <img src="img/demon-slayer-kimetsu-no-yaiba-the-hinokami-chronicles-2-202572816513744_1.jpg.png" alt="Demon Slayer: Se confirma fecha de lanzamiento">
+      <div class="meta">Demon Slayer: Se confirma fecha de lanzamiento</div>
+    </a>
+
+    <a class="news-card" href="#">
+      <img src="img/s_a_pf_m_anni.jpg.png" alt="Metaphor: Atlus anuncia su estreno en 2026">
+      <div class="meta">Metaphor: Atlus anuncia su estreno en 2026</div>
+    </a>
+
+    <a class="news-card" href="#">
+      <img src="img/2025218124947_1.jpg.png" alt="Sonic: El Aparcima ya tiene fecha de streaming en España">
+      <div class="meta">Sonic: El Aparcima ya tiene fecha de streaming en España</div>
+    </a>
+
+    <a class="news-card" href="#">
+      <img src="img/Sonic-Sega-PC-gaming-Sonic-Frontiers-Video-Game-Art-Sonic-the-Hedgehog-meteors-tower-grass-night-diamonds-2197423.jpg" alt="Twilight Runner: Sonic regresa en un spin-off más oscuro">
+      <div class="meta">Twilight Runner: Sonic regresa en un spin-off más oscuro</div>
+    </a>
+
+    <a class="news-card" href="#">
+      <img src="img/OIP.jpg" alt="Wings of Intrigue: Rouge protagonizará su propio spin-off animado">
+      <div class="meta">Wings of Intrepid: Rouge protagonizará su propio spin-off animado</div>
+    </a>
+
+    <a class="news-card" href="#">
+      <img src="img/5b36169e-ff66-4126-be00-99d41a79e208.png" alt="SEGA: Revive su estética retro con arte icónico">
+      <div class="meta">SEGA: Revive su estética retro con arte icónico</div>
+    </a>
+
+    <a class="news-card" href="#">
+      <img src="img/_noticias2020_-5633467.jpg" alt="SEGA: Se despide de los técnicos héroes de la era 16-bit">
+      <div class="meta">SEGA: Se despide de los técnicos héroes de la era 16-bit</div>
+    </a>
+
+    <div class="news-card placeholder" aria-hidden="true"></div>
+  </div>
+
+ <div class="news-title-block">
+  <h2 class="news-word noticias">NOTICIAS</h2>
+  <h2 class="news-word mas">MAS</h2>
+  <h2 class="news-word recientes">RECIENTES</h2>
+</div>
+
+
+</section>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const scroller = document.getElementById('catalog-scroller');
+    const prev = document.querySelector('.nav-btn.prev');
+    const next = document.querySelector('.nav-btn.next');
+
+    if (!scroller || !prev || !next) return;
+
+    const step = () => Math.max(280, Math.round(scroller.clientWidth * 0.9));
+    prev.addEventListener('click', () => scroller.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next.addEventListener('click', () => scroller.scrollBy({ left:  step(), behavior: 'smooth' }));
+  });
+</script>
+
+<!-- ===================== SLIDE: PLANES / PRECIOS ===================== -->
+<section id="planes" class="slide-pricing" aria-labelledby="pricing-title">
+  
+
+  <div class="wrap">
+    <h2 id="pricing-title">Elige el plan perfecto para ti</h2>
+    <p class="subtitle">Accede a clásicos, estrenos y noticias exclusivas de SEGA, en cualquier momento y desde cualquier dispositivo.</p>
+
+    <div class="cards">
+      <!-- Plan Básico -->
+      <article class="card">
+        <header class="head">
+          <span class="plan">Básico</span>
+          <p class="tagline">Perfecto para empezar</p>
+        </header>
+        <div class="price"><small>$</small>4<small>99</small></div>
+        <ul>
+          <li>✔ Acceso completo a series y juegos SEGA</li>
+          <li>✔ 1 dispositivo a la vez</li>
+          <li>✔ Calidad HD</li>
+          <li class="mute">✘ Estrenos exclusivos</li>
+          <li class="mute">✘ Descargas offline</li>
+        </ul>
+        <a class="pricing-btn" href="#!">Únete</a>
+      </article>
+
+      <!-- Plan Intermedio -->
+      <article class="card">
+        <header class="head">
+          <span class="plan">Intermedio</span>
+          <p class="tagline">Ideal para fans activos</p>
+        </header>
+        <div class="price"><small>$</small>9<small>99</small></div>
+        <ul>
+          <li>✔ Acceso completo a series y juegos SEGA</li>
+          <li>✔ 3 dispositivos simultáneos</li>
+          <li>✔ Full HD</li>
+          <li>✔ Descargas offline</li>
+          <li class="mute">✘ Soporte VIP</li>
+        </ul>
+        <a class="pricing-btn" href="#!">Únete</a>
+      </article>
+
+      <!-- Plan Pro -->
+      <article class="card">
+        <header class="head">
+          <span class="plan">Pro</span>
+          <p class="tagline">Acceso completo a todo SEGA</p>
+        </header>
+        <div class="price"><small>$</small>14<small>99</small></div>
+        <ul>
+          <li>✔ Catálogo ilimitado</li>
+          <li>✔ 5 dispositivos simultáneos</li>
+          <li>✔ 4K UHD + Descargas</li>
+          <li>✔ Soporte VIP</li>
+          <li>✔ Comunidad exclusiva</li>
+        </ul>
+        <a class="pricing-btn" href="#!">Únete</a>
+      </article>
+    </div>
+
+    <p class="footnote">Precios en USD. Puedes adaptarlos a tu moneda.</p>
+  </div>
+</section>
+
+<!-- =================== /SLIDE: PLANES / PRECIOS =================== -->
+<section id="entrevistas" class="section-interviews">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow-sec">VER</p>
+      <h2 class="section-title">ENTREVISTAS</h2>
+    </div>
+  </div>
+
+  <div id="carouselEntrevistas" class="carousel slide" data-bs-ride="carousel">
+   
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row g-3">
+          <div class="col-12 col-md-4">
+            <a class="interview-card" href="#!" aria-label="Ver entrevista a Takashi Iizuka">
+              <img src="img/maxresdefault (3).jpg" alt="Takashi Iizuka">
+              <div class="meta">Takashi Iizuka</div>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a class="interview-card" href="#!" aria-label="Ver Historia de SEGA">
+              <img src="img/sonic-prision-1000x600.jpeg" alt="Historia de SEGA">
+              <div class="meta">Historia de SEGA</div>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a class="interview-card" href="#!" aria-label="Ver entrevista a Toshihiro Nagoshi">
+              <img src="img/toshihiro-nagoshi.jpg" alt="Toshihiro Nagoshi">
+              <div class="meta">Toshihiro Nagoshi</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="row g-3">
+          <div class="col-12 col-md-4">
+            <a class="interview-card" href="#!">
+              <img src="img/maxresdefault.jpg" alt="Entrevista desarrollador 1">
+              <div class="meta">Detrás de escena</div>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a class="interview-card" href="#!">
+              <img src="img/sonicrise_concept.jpg" alt="Entrevista desarrollador 2">
+              <div class="meta">Arte & Concept</div>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a class="interview-card" href="#!">
+              <img src="img/3367-sintetizador-de-sonido-analogico-casero-basado-en-sega-megadrive-y-arduino.jpg" alt="Entrevista desarrollador 3">
+              <div class="meta">Música & Sonido</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselEntrevistas" data-bs-slide="prev" aria-label="Anterior">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselEntrevistas" data-bs-slide="next" aria-label="Siguiente">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+</section>
+
+
+<!-- ===================== SLIDE FINAL (CONTACTO + FOOTER) ===================== -->
+<section id="contacto" class="slide-final">
+  
+
+  <div class="contact-row">
+
+
+    <!-- Columna izquierda -->
+    <div class="info-col">
+      <div class="info-list">
+        <div class="info-item">
+          <div class="info-ico">✉</div>
+          <div>
+            <p class="info-label">EMAIL</p>
+            <p class="info-text">dpo@sega.co.uk / dataprivacy@segaamerica.com</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-ico">☎</div>
+          <div>
+            <p class="info-label">TELÉFONO</p>
+            <p class="info-text">+54 1130498846</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-ico">👤</div>
+          <div>
+            <p class="info-label">SOPORTE</p>
+            <p class="info-text">help.sega-stream.com / soporte@sega-stream.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner">
+        <strong>Respuesta Garantizada</strong>
+        <small>Te responderemos en menos de 48hs en días laborales.</small>
+      </div>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="form-col">
+      <form id="contacto-form" class="form-box" onsubmit="event.preventDefault()">
+        <h4>Envíanos un mensaje</h4>
+        <p class="help">Completa el formulario y nos pondremos en contacto contigo.</p>
+
+        <div class="row2">
+          <label><input type="text" name="nombre" placeholder="Nombre" required></label>
+          <label><input type="email" name="email" placeholder="Email" required></label>
+        </div>
+
+        <label style="display:block; margin-top:14px;">
+          <input type="text" name="empresa" placeholder="Empresa">
+        </label>
+
+        <label style="display:block; margin-top:14px;">
+          <input type="text" name="asunto" placeholder="Asunto">
+        </label>
+
+        <label style="display:block; margin-top:14px;">
+          <textarea name="mensaje" placeholder="Mensaje"></textarea>
+        </label>
+      </form>
+
+      <div class="send-outer">
+        <button class="btn-8bit" type="submit" form="contacto-form">ENVIAR</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="sf-footer">
+    <div class="sf-wrap">
+      <div class="sf-grid">
+        <div class="sf-col-4">
+          <h5>Acerca de</h5>
+          <a href="#">Estudios</a>
+          <a href="#">Empleo</a>
+        </div>
+
+        <div class="sf-col-4">
+          <h5>Tienda</h5>
+          <a href="#">Marketplace</a>
+          <a href="#">Tienda de SEGA</a>
+        </div>
+
+        <div class="sf-col-4">
+          <h5>Comunidad</h5>
+          <a href="#">Portal del creador</a>
+          <a href="#">Construir un mundo mejor</a>
+          <a href="#">Gameplays</a>
+        </div>
+
+        <div class="sf-col-12 copy">
+          ©2025 SEGA gaming. Todos los derechos reservados.
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+
+
+
+</body>
+</html>

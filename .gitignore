@@ -1,0 +1,8 @@
+# Originales que mandó Enzo (fotos, miniaturas en alta): no van a la web
+fuentes/
+# Capturas y reportes de las revisiones de diseño
+.taste-skill/
+__pycache__/
+*.pyc
+Thumbs.db
+desktop.ini
