@@ -390,7 +390,7 @@ def build_home():
     ribbon = "".join(f"<li>{e(d)}</li>" for d in DISCIPLINES)
     body = f"""  <section class="hero" aria-labelledby="hero-title">
     <h1 class="hero__title" id="hero-title">Hola, soy Enzo.</h1>
-    <p class="hero__statement">Diseñador multimedial y técnico en Animación Digital. Hago motion graphics, identidad de marca y piezas para redes, de la idea al archivo final.</p>
+    <p class="hero__statement">Diseñador multimedial y técnico en Animación Digital<span class="solo-compu">. Hago motion graphics, identidad de marca y piezas para redes</span>, de la idea al archivo final.</p>
     <div class="hero__foot">
       <p class="hero__status"><span class="dot" aria-hidden="true"></span>Disponibilidad completa</p>
       <p class="hero__actions"><a class="btn" href="#trabajos">Ver trabajos</a><a class="link" href="#contacto">Escribime</a></p>
@@ -428,7 +428,7 @@ def build_home():
       <img class="about__photo media" src="media/enzo.jpg" alt="Enzo Gimenez de frente, con campera azul, sobre una pared blanca" width="640" height="800" loading="lazy">
     </div>
     <div class="about__text">
-      <p class="about__lead">Soy Enzo Gimenez, tengo 21 años y soy diseñador multimedial y técnico en Animación Digital. Hago piezas para redes, motion graphics e identidad de marca, de la idea al archivo final.</p>
+      <p class="about__lead">Soy Enzo Gimenez, tengo 21 años. Hago piezas para redes, motion graphics e identidad de marca. Soy capaz de realizar desde la parte creativa hasta la posproducción.</p>
       <p>Desde 2024 trabajo como diseñador freelance: armo identidades de marca completas y diseño miniaturas para YouTube. En la facultad hice animación digital, stop motion, maquetado web e interfaces interactivas.</p>
     </div>
     <dl class="about__list">
