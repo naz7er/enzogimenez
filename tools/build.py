@@ -279,7 +279,7 @@ PROJECTS = [
 DISCIPLINES = ["Motion graphics", "Identidad de marca", "Animación 2D", "Stop motion", "Edición de video", "Miniaturas para YouTube", "Diseño web"]
 
 # El orden en que aparecen en la grilla (y el de «Siguiente proyecto»)
-ORDER = ["united-in-grief", "nn", "sega-tv", "sega-tv-web", "osogrosso", "mi-pequeno"]
+ORDER = ["osogrosso", "mi-pequeno", "united-in-grief", "nn", "sega-tv", "sega-tv-web"]
 PROJECTS.sort(key=lambda p: ORDER.index(p["slug"]))
 
 # Piezas gráficas: miniaturas y portadas, agrupadas por para quién se hicieron
@@ -367,7 +367,7 @@ def tile_media(p, root, hover=True):
 
 
 def build_home():
-    widths = ["w5", "w7", "w7", "w5", "w6", "w6"]
+    widths = ["w7", "w5", "w5", "w7", "w7", "w5"]
     tiles = "\n".join(
         f"""      <li class="tile tile--{w}">
         <a class="tile__link" href="proyectos/{p["slug"]}.html">
