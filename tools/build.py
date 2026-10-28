@@ -279,7 +279,7 @@ PROJECTS = [
 DISCIPLINES = ["Motion graphics", "Identidad de marca", "Animación 2D", "Stop motion", "Edición de video", "Miniaturas para YouTube", "Diseño web"]
 
 # El orden en que aparecen en la grilla (y el de «Siguiente proyecto»)
-ORDER = ["osogrosso", "mi-pequeno", "united-in-grief", "nn", "sega-tv", "sega-tv-web"]
+ORDER = ["osogrosso", "united-in-grief", "mi-pequeno", "nn", "sega-tv", "sega-tv-web"]
 PROJECTS.sort(key=lambda p: ORDER.index(p["slug"]))
 
 # Piezas gráficas: miniaturas y portadas, agrupadas por para quién se hicieron
